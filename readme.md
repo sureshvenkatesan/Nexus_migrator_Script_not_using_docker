@@ -31,6 +31,11 @@ curl -fkL https://getcli.jfrog.io/v2-jf | sh
    Follow the instructions provided in the 
    [Migrating specific repositories from Nexus3 to Artifactory.pdf](Migrating%20specific%20repositories%20from%20Nexus3%20to%20Artifactory.pdf)  document.
 
+Note: Since you will be running the script without a docker runtime , you will also need a `jfrog-nexus-migrator` utility/plugin . Contact JFrog PS to get this :
+```
+ jf rt dl "cli-plugins/jfrog-nexus-migrator/0.9.2/jfrog-nexus-migrator" --server-id psazuse
+ ```
+On your Nexus server copy it to a folder in the $PATH ( usually the `/usr/local/bin` folder) and set the execute permission for this `jfrog-nexus-migrator` utility.
 
 ## Notes
 
